@@ -14,9 +14,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.firstTableView = [[UITableView alloc] init];
-	self.firstTableView.frame = self.view.frame;
-    //[self.view addSubview:self.firstTableView];
-    [self.view addSubview:self.secondTableView];
+	//self.firstTableView.frame = self.view.frame;
+    self.firstTableView.frame = CGRectMake(0, 320, 320, 480);
+    [self.view addSubview:self.firstTableView];
     self.firstTableView.dataSource = self;
 
     self.df = [NSDateFormatter new];
