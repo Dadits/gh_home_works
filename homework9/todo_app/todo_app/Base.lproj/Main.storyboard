@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" editingAccessoryType="detailDisclosureButton" textLabel="2pz-XF-uhl" style="IBUITableViewCellStyleDefault" id="m0d-ak-lc9">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" editingAccessoryType="disclosureIndicator" textLabel="2pz-XF-uhl" style="IBUITableViewCellStyleDefault" id="m0d-ak-lc9">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
@@ -46,7 +46,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="mdJ-3F-xn8" kind="presentation" identifier="showDetail" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="RZy-RB-rP2"/>
+                                    <segue destination="mdJ-3F-xn8" kind="showDetail" identifier="showDetail" id="LUF-as-sJg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -71,16 +71,16 @@
                         <viewControllerLayoutGuide type="bottom" id="4G7-WE-MuQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m92-uY-1nd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nameTextField" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xJm-xH-7iU">
-                                <rect key="frame" x="16" y="110" width="568" height="30"/>
+                                <rect key="frame" x="16" y="110" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="descTextField" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xKT-uQ-psy">
-                                <rect key="frame" x="16" y="361" width="568" height="30"/>
+                                <rect key="frame" x="16" y="361" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -106,14 +106,24 @@
                                 <rect key="frame" x="16" y="439" width="51" height="31"/>
                             </switch>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5jy-xB-7Pk">
-                                <rect key="frame" x="16" y="156" width="453" height="162"/>
+                                <rect key="frame" x="50" y="148" width="274" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="440894429.97035402">
                                     <!--2014-12-21 22:40:29 +0000-->
                                 </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9le-TI-g9G">
+                                <rect key="frame" x="302" y="20" width="67" height="28"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="mdJ-3F-xn8" eventType="touchUpInside" id="Wof-h6-f9M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="completionLabel" destination="cz6-Ve-GXJ" id="fs5-u9-phn"/>
                         <outlet property="completionSwitch" destination="w8t-S2-vwW" id="XQo-Z5-jGi"/>
@@ -122,11 +132,12 @@
                         <outlet property="nameLabel" destination="bla-jg-zY2" id="Gg5-Va-doM"/>
                         <outlet property="nameTextField" destination="xJm-xH-7iU" id="hxC-1L-A36"/>
                         <outlet property="todoDatePicker" destination="5jy-xB-7Pk" id="zil-K0-Yx4"/>
+                        <outlet property="todoSaveButton" destination="9le-TI-g9G" id="5xO-UU-cFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSq-fR-khY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="814"/>
+            <point key="canvasLocation" x="600.5" y="891.5"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
