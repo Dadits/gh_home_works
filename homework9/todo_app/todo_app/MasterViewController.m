@@ -26,6 +26,7 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showTodoAlert)];
     self.navigationItem.rightBarButtonItem = addButton;
+    self.tableView.allowsSelectionDuringEditing = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,7 +85,24 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         [[segue destinationViewController] setDetailItem:object];
+    } else if ([[segue identifier] isEqualToString:@"editDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        [[segue destinationViewController] setDetailItem:object];
     }
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)segue sender:(id)sender {
+    if ([self.tableView isEditing]) {
+        if ([segue isEqualToString:@"editDetail"]) {
+            return YES;
+        }
+    } else {
+        if ([segue isEqualToString:@"showDetail"]) {
+            return YES;
+        }
+    }
+    return nil;
 }
 
 #pragma mark - Table View
@@ -102,6 +120,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *segueName = nil;
+    if ([self.tableView isEditing]) {
+        segueName = @"editDetail";
+    } else {
+        segueName = @"showDetail";
+    }
+    [self performSegueWithIdentifier: segueName sender: self];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
