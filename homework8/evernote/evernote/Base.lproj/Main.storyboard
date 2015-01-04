@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zjp-h7-XNq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="dZf-Xq-qrj">
+            <objects>
+                <pageViewController storyboardIdentifier="PageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="wCT-ox-KhL" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NmE-i5-DFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="113"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yXO-Lz-d70">
+            <objects>
+                <viewController id="Zjp-h7-XNq" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RBw-Q5-eS6"/>
+                        <viewControllerLayoutGuide type="bottom" id="9mV-ty-uMU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4kl-bs-RT7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0yz-3u-5g5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421.5" y="112.5"/>
+        </scene>
+        <!--Page Item Controller-->
+        <scene sceneID="vE0-P2-J6n">
+            <objects>
+                <viewController storyboardIdentifier="PageItemController" id="ZMS-KA-Xa8" customClass="PageItemController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sce-o2-39o"/>
+                        <viewControllerLayoutGuide type="bottom" id="PIY-Gc-Wtc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6lk-R5-xRI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C8Q-vb-ugl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26779738250000001" green="0.68986555679999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PIY-Gc-Wtc" firstAttribute="top" secondItem="C8Q-vb-ugl" secondAttribute="bottom" id="0d3-mp-7fv"/>
+                            <constraint firstItem="C8Q-vb-ugl" firstAttribute="leading" secondItem="6lk-R5-xRI" secondAttribute="leading" id="BA9-gj-W2t"/>
+                            <constraint firstItem="C8Q-vb-ugl" firstAttribute="top" secondItem="6lk-R5-xRI" secondAttribute="top" id="OOr-bq-Wsc"/>
+                            <constraint firstAttribute="trailing" secondItem="C8Q-vb-ugl" secondAttribute="trailing" id="wvd-K2-Qdm"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="contentImageView" destination="C8Q-vb-ugl" id="rxA-oC-GO7"/>
+                        <outlet property="view" destination="6lk-R5-xRI" id="RM6-A9-eD1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8i-py-FIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1253.5" y="112.5"/>
+        </scene>
+    </scenes>
+</document>
