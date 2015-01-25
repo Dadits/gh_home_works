@@ -15,6 +15,8 @@
 		3A27113C1A6C2807001081D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A27113B1A6C2807001081D9 /* Images.xcassets */; };
 		3A27113F1A6C2807001081D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A27113D1A6C2807001081D9 /* LaunchScreen.xib */; };
 		3A27114B1A6C2807001081D9 /* currency_exchangeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A27114A1A6C2807001081D9 /* currency_exchangeTests.m */; };
+		3AB2524E1A75242B0069485A /* convert.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB2524D1A75242B0069485A /* convert.png */; };
+		3AB252521A7524D80069485A /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB252511A7524D80069485A /* Currency.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		3A2711441A6C2807001081D9 /* currency_exchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = currency_exchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2711491A6C2807001081D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A27114A1A6C2807001081D9 /* currency_exchangeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = currency_exchangeTests.m; sourceTree = "<group>"; };
+		3AB2524D1A75242B0069485A /* convert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = convert.png; path = "../../../../geekhub-ios/urlConnect/urlConnect/convert.png"; sourceTree = "<group>"; };
+		3AB252501A7524CB0069485A /* Currency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
+		3AB252511A7524D80069485A /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,7 @@
 		3A27112A1A6C2807001081D9 /* currency_exchange */ = {
 			isa = PBXGroup;
 			children = (
+				3AB2524D1A75242B0069485A /* convert.png */,
 				3A27112F1A6C2807001081D9 /* AppDelegate.h */,
 				3A2711301A6C2807001081D9 /* AppDelegate.m */,
 				3A2711351A6C2807001081D9 /* ViewController.h */,
@@ -92,6 +98,8 @@
 				3A27113D1A6C2807001081D9 /* LaunchScreen.xib */,
 				3A2711321A6C2807001081D9 /* currency_exchange.xcdatamodeld */,
 				3A27112B1A6C2807001081D9 /* Supporting Files */,
+				3AB252501A7524CB0069485A /* Currency.h */,
+				3AB252511A7524D80069485A /* Currency.m */,
 			);
 			path = currency_exchange;
 			sourceTree = "<group>";
@@ -205,6 +213,7 @@
 				3A27113A1A6C2807001081D9 /* Main.storyboard in Resources */,
 				3A27113F1A6C2807001081D9 /* LaunchScreen.xib in Resources */,
 				3A27113C1A6C2807001081D9 /* Images.xcassets in Resources */,
+				3AB2524E1A75242B0069485A /* convert.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +235,7 @@
 				3A2711341A6C2807001081D9 /* currency_exchange.xcdatamodeld in Sources */,
 				3A2711371A6C2807001081D9 /* ViewController.m in Sources */,
 				3A27112E1A6C2807001081D9 /* main.m in Sources */,
+				3AB252521A7524D80069485A /* Currency.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +426,7 @@
 				3A2711501A6C2807001081D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A2711511A6C2807001081D9 /* Build configuration list for PBXNativeTarget "currency_exchangeTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +435,7 @@
 				3A2711531A6C2807001081D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
